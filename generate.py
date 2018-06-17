@@ -15,15 +15,19 @@ ignorefile = []
 os.chdir("{}/gitignore".format(rootdir))
 for file in glob.glob("*.gitignore"):
     ignorefile.append(file)
+print(ignorefile)
 
 # Merge all the gitignore files into one file
 print("Merging all .gitignore files...")
 f = open("{}/.gitignore".format(rootdir), "a+")
 for i in enumerate(ignorefile):
     f2 = open("{}/gitignore/{}".format(rootdir, i[1]), "r")
-    f.write(f2.read())
+    linestoread = f2.readlines
+    linestoread = [x.strip() for x in content]
+    for i in enumerate(linestoread):
+         f.write(i[1])
     f2.close
-print(f)
+print(f.readlines)
 f.close()
     
 # Search for all gitattributes files and append them to a list
@@ -39,6 +43,9 @@ print("Merging all .gitattributes files...")
 f = open("{}/.gitattributes".format(rootdir), "a+")
 for i in enumerate(attributefile):
     f2 = open("{}/gitattributes/{}".format(rootdir, i[1]), "r")
-    f.write(f2.read())
+    linestoread = f2.readlines
+    linestoread = [x.strip() for x in content]
+    for i in enumerate(linestoread):
+         f.write(i[1])
     f2.close
 f.close()
