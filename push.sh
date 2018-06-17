@@ -6,7 +6,7 @@ setup_git() {
 }
 
 commit_files() {
-  git checkout -b gh-pages
+  git checkout -b master
   git add $PWD/files/.gitignore
   git add $PWD/files/.gitattributes
   git commit --message "Updated Git Files"
