@@ -1,2 +1,3 @@
-# git-files
-An AIO gitignore and gitattributes file all in one place
+# Git Files
+
+A `.gitignore` and `.gitattributes` file containing ignore code for all programming languages, automatically updated daily
