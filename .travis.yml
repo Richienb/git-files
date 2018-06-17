@@ -16,7 +16,7 @@ script:
   - python generate.py $PWD
   
 after_success:
-  - .travis/push.sh
+  - $PWD/push.sh
 
 notifications:
   email: false
