@@ -23,6 +23,7 @@ for i in enumerate(ignorefile):
     f2 = open("{}/gitignore/{}".format(rootdir, i[1]), "r")
     f.write(f2.read())
     f2.close
+print(f)
 f.close()
     
 # Search for all gitattributes files and append them to a list
