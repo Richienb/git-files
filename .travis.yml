@@ -13,4 +13,14 @@ before_script:
   - git clone https://github.com/alexkaratarakis/gitattributes.git
 
 script:
-  - python generate.py
+  - python generate.py $PWD
+  
+deploy:
+  provider: master
+  api_key: $github_token
+  file:
+    - files/.gitattributes
+    - files/.gitignore
+  skip_cleanup: true
+  on:
+    tags: true
