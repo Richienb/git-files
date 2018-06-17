@@ -7,7 +7,7 @@ open("files/.gitattributes", "w").close()
 print("Searching for all .gitignore files...")
 ignorefile = []
 import glob, os
-os.chdir("/gitignore")
+os.chdir("gitignore")
 for file in glob.glob("*.gitignore"):
     ignorefile.append(file)
 
@@ -21,7 +21,7 @@ for i in enumerate(ignorefile):
 print("Searching for all .gitattributes files...")
 attributefile = []
 import glob, os
-os.chdir("/gitattributes")
+os.chdir("gitattributes")
 for file in glob.glob("*.gitattributes"):
     if not file == ".gitattributes":
         ignorefile.append(file)
