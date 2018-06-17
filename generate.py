@@ -20,10 +20,11 @@ for file in glob.glob("*.gitignore"):
 print("Merging all .gitignore files...")
 f = open("{}/.gitignore".format(rootdir), "a+")
 for i in enumerate(ignorefile):
-    f2 = open("{}/gitignore/{}".format(rootdir, i[1]), "r")
-    linestoread = f2.readlines
-    linestoread = [linestoread.rstrip('\n') for line in file]
-    for i in enumerate(linestoread):
+    #f2 = open("{}/gitignore/{}".format(rootdir, i[1]), "r")
+    with open("{}/gitignore/{}".format(rootdir, i[1]), "r") as f:
+        content = f.readlines()
+    content = [x.strip() for x in content] 
+    for i in enumerate(content):
          f.write(i[1])
     f2.close
 print(f.readlines)
