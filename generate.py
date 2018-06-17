@@ -18,10 +18,10 @@ for file in glob.glob("*.gitignore"):
 
 # Merge all the gitignore files into one file
 print("Merging all .gitignore files...")
+f = open("{}/.gitignore".format(rootdir), "a+")
 for i in enumerate(ignorefile):
-    f = open("{}/.gitignore".format(rootdir), "w")
-    print(i[1])
-    f.write(i[1].read())
+    f.write(i[1])
+f.close()
     
 # Search for all gitattributes files and append them to a list
 print("Searching for all .gitattributes files...")
@@ -33,6 +33,7 @@ for file in glob.glob("*.gitattributes"):
         
 # Merge all the gitattributes files into one file
 print("Merging all .gitattributes files...")
+f = open("{}/.gitattributes".format(rootdir), "a+")
 for i in enumerate(attributefile):
-    f = open("{}/.gitattributes".format(rootdir), "w")
-    f.write(i[1].read())
+    f.write(i[1])
+f.close()
