@@ -22,7 +22,7 @@ f = open("{}/.gitignore".format(rootdir), "a+")
 for i in enumerate(ignorefile):
     f2 = open("{}/gitignore/{}".format(rootdir, i[1]), "r")
     linestoread = f2.readlines
-    linestoread = [x.strip() for x in linestoread]
+    linestoread = [linestoread.rstrip('\n') for line in file]
     for i in enumerate(linestoread):
          f.write(i[1])
     f2.close
@@ -43,7 +43,7 @@ f = open("{}/.gitattributes".format(rootdir), "a+")
 for i in enumerate(attributefile):
     f2 = open("{}/gitattributes/{}".format(rootdir, i[1]), "r")
     linestoread = f2.readlines
-    linestoread = [x.strip() for x in linestoread]
+    linestoread = [linestoread.rstrip('\n') for line in file]
     for i in enumerate(linestoread):
          f.write(i[1])
     f2.close
