@@ -1,0 +1,16 @@
+sudo: false
+
+language: python
+
+python:
+  - 3.6.5
+
+before_install:
+  - sudo apt-get update
+
+before_script:
+  - git clone https://github.com/github/gitignore.git
+  - git clone https://github.com/alexkaratarakis/gitattributes.git
+
+script:
+  - python generate.py
