@@ -21,13 +21,11 @@ pprint(ignorefile)
 
 # Merge all the gitignore files into one file
 print("Merging all .gitignore files...")
-f = open("{}/.gitignore".format(rootdir), "a+")
-for i in enumerate(ignorefile):
-    with open("{}/gitignore/{}".format(rootdir, i[1]), "r") as f2:
-        content = f2.readlines()
-    content = [x.strip() for x in content] 
-    for ii in enumerate(content):
-         f.write(ii[1])
+with open("{}/files/.gitignore".format(rootdir), "a") as f:
+    for i in enumerate(ignorefile):
+        with open("{}/gitignore/{}".format(rootdir, i[1]) as ff:
+            for ii in enumerate(ff.readlines()):
+                  f.write(str(ii[1]))
 print(".gitignore contents: ")
 pprint(f.readlines())
 f.close()
