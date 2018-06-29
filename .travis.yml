@@ -10,12 +10,10 @@ before_install:
   - git config --global user.name "Richienb"
 
 install:
+  - git clone https://Richienb:${github_token}@github.com/Richienb/git-files.git ./repo
+  - cd git-files
   - git clone https://github.com/github/gitignore.git
   - git clone https://github.com/alexkaratarakis/gitattributes.git
-
-before_script:
-  - git remote rm origin
-  - git remote add origin ${GITHUB_TOKEN}@github.com:Richienb/git-files.git
 
 script:
   - python generate.py $PWD
@@ -23,8 +21,8 @@ script:
 after_success:
   - git add $PWD/files/.gitignore
   - git add $PWD/files/.gitattributes
-  - git commit -m "Update Git Files"
-  - git push origin master
+  - git commit -m "Update Git Files [skip ci]"
+  - git push
 
 notifications:
   email: false
