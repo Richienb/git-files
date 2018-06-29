@@ -28,6 +28,9 @@ for i in enumerate(ignorefile):
     f2.close
 print(f.readlines())
 f.close()
+with open("{}/files/.gitignore".format(rootdir), "r") as f2:
+    print(str(f2.readlines()))
+    
     
 # Search for all gitattributes files and append them to a list
 print("Searching for all .gitattributes files...")
