@@ -19,8 +19,7 @@ script:
   - python generate.py $PWD
   
 after_success:
-  - git add $PWD/files/.gitignore
-  - git add $PWD/files/.gitattributes
+  - git add $PWD/files/.gitignore $PWD/files/.gitattributes
   - git commit -m "Update Git Files [skip ci]"
   - git push
 
