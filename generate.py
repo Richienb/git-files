@@ -21,7 +21,7 @@ pprint(ignorefile)
 
 # Merge all the gitignore files into one file
 print("Merging all .gitignore files...")
-with open("{}/files/.gitignore".format(rootdir), "a") as f:
+with open("{}/files/.gitignore".format(rootdir), "a+") as f:
     for i in enumerate(ignorefile):
         with open("{}/gitignore/{}".format(rootdir, i[1])) as ff:
             for ii in enumerate(ff.readlines()):
@@ -41,7 +41,7 @@ pprint(attributefile)
         
 # Merge all the gitattributes files into one file
 print("Merging all .gitattributes files...")
-with open("{}/files/.gitattributes".format(rootdir), "a") as f:
+with open("{}/files/.gitattributes".format(rootdir), "a+") as f:
     for i in enumerate(attributefile):
         with open("{}/gitattributes/{}".format(rootdir, i[1])) as ff:
             for ii in enumerate(ff.readlines()):
