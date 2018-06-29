@@ -26,9 +26,8 @@ with open("{}/files/.gitignore".format(rootdir), "a") as f:
         with open("{}/gitignore/{}".format(rootdir, i[1])) as ff:
             for ii in enumerate(ff.readlines()):
                 f.write(str(ii[1]))
-print(".gitignore contents: ")
-pprint(f.readlines())
-f.close()
+    print(".gitignore contents: ")
+    pprint(f.readlines())
     
 # Search for all gitattributes files and append them to a list
 print("Searching for all .gitattributes files...")
@@ -37,15 +36,15 @@ os.chdir("{}/gitattributes".format(rootdir))
 for file in glob.glob("*.gitattributes"):
     if not file == ".gitattributes":
         ignorefile.append(file)
+print("Found .gitattributes files:")
+pprint(attributefile)
         
 # Merge all the gitattributes files into one file
 print("Merging all .gitattributes files...")
-f = open("{}/.gitattributes".format(rootdir), "a+")
-for i in enumerate(attributefile):
-    with open("{}/gitattributes/{}".format(rootdir, i[1]), "r") as f2:
-        content = f2.readlines()
-    content = [x.strip() for x in content] 
-    for i in enumerate(content):
-         f.write(i[1])
-    f2.close
-f.close()
+with open("{}/files/.gitattributes".format(rootdir), "a") as f:
+    for i in enumerate(attributefile):
+        with open("{}/gitattributes/{}".format(rootdir, i[1])) as ff:
+            for ii in enumerate(ff.readlines()):
+                f.write(str(ii[1]))
+    print(".gitattributes contents: ")
+    pprint(f.readlines())
