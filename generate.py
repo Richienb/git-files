@@ -3,7 +3,10 @@ from pprint import pprint
 import glob, os
 
 # Set root directory
-rootdir = args[1]
+try:
+    rootdir = args[1]
+except:
+    print("Please specify the directory you are running this script in.")
 
 # Clear files
 print("Clearing files...")
