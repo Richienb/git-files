@@ -16,10 +16,10 @@ install:
   - git clone https://github.com/alexkaratarakis/gitattributes.git
 
 script:
-  - python generate.py $PWD
+  - python generate.py $TRAVIS_BUILD_DIR/git-files
   
 after_success:
-  - git add $PWD/files/.gitignore $PWD/files/.gitattributes
+  - git add $TRAVIS_BUILD_DIR/git-files/files/.gitignore $TRAVIS_BUILD_DIR/git-files/files/.gitattributes
   - git commit -m "Update Git Files [skip ci]"
   - git push
 
