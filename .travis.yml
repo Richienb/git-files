@@ -10,6 +10,7 @@ before_install:
   - git config --global user.name "Richienb"
 
 install:
+  - pip install future
   - git clone https://Richienb:${github_token}@github.com/Richienb/git-files.git
   - cd git-files
   - git clone https://github.com/github/gitignore.git
@@ -21,6 +22,10 @@ script:
 after_success:
   - git add $TRAVIS_BUILD_DIR/git-files/files/.gitignore $TRAVIS_BUILD_DIR/git-files/files/.gitattributes
   - git commit -m "Update Git Files [skip ci]"
+  - pasteurize $PWD/generate.py
+  - mv $PWD/generate.py $PWD/generate2.py
+  - git add $PWD/generate2.py
+  - git commit -m "Added backwards compatibility [skip ci]"
   - git push
 
 notifications:
