@@ -1,4 +1,5 @@
 from sys import argv as args
+from pprint import pprint
 import glob, os
 
 # Set root directory
@@ -15,7 +16,8 @@ ignorefile = []
 os.chdir("{}/gitignore".format(rootdir))
 for file in glob.glob("*.gitignore"):
     ignorefile.append(file)
-print(ignorefile)
+print("Found .gitignore files:")
+pprint(ignorefile)
 
 # Merge all the gitignore files into one file
 print("Merging all .gitignore files...")
@@ -26,7 +28,8 @@ for i in enumerate(ignorefile):
     content = [x.strip() for x in content] 
     for ii in enumerate(content):
          f.write(ii[1])
-print(".gitignore contents: " + f.readlines())
+print(".gitignore contents: ")
+pprint(f.readlines())
 f.close()
     
 # Search for all gitattributes files and append them to a list
