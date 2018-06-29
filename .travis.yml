@@ -10,7 +10,7 @@ before_install:
   - git config --global user.name "Richienb"
 
 install:
-  - git clone https://Richienb:${github_token}@github.com/Richienb/git-files.git ./repo
+  - git clone https://Richienb:${github_token}@github.com/Richienb/git-files.git
   - cd git-files
   - git clone https://github.com/github/gitignore.git
   - git clone https://github.com/alexkaratarakis/gitattributes.git
