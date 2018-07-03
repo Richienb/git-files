@@ -87,11 +87,11 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 fastlane/readme.md
+# Google App Engine generated folder
+appengine-generated/
 # Build folder and log file
 build/
 build.log
-# Google App Engine generated folder
-appengine-generated/
 *.tar
 *.tar.*
 *.jar
@@ -230,6 +230,33 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+# unpacked plugin folders
+plugins/**/*
+
+# files directory where uploads go
+files
+
+# DBMigrate plugin: generated SQL
+db/sql
+
+# AssetBundler plugin: generated bundles
+javascripts/bundles
+stylesheets/bundles
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+*.i
+*.ii
+*.gpu
+*.ptx
+*.cubin
+*.fatbin
 # CakePHP 3
 
 /vendor/*
@@ -255,18 +282,6 @@ dkms.conf
 /app/Config/core.php
 /app/Config/database.php
 /vendors/*
-# unpacked plugin folders
-plugins/**/*
-
-# files directory where uploads go
-files
-
-# DBMigrate plugin: generated SQL
-db/sql
-
-# AssetBundler plugin: generated bundles
-javascripts/bundles
-stylesheets/bundles
 .vagrant
 /cookbooks
 
@@ -276,15 +291,20 @@ bin/*
 
 .kitchen/
 .kitchen.local.yml
-Leiningen.gitignoreCMakeCache.txt
-CMakeFiles
-CMakeScripts
-Testing
-Makefile
-cmake_install.cmake
-install_manifest.txt
-compile_commands.json
-CTestTestfile.cmake
+pom.xml
+pom.xml.asc
+*.jar
+*.class
+/lib/
+/classes/
+/target/
+/checkouts/
+.lein-deps-sum
+.lein-repl-history
+.lein-plugins/
+.lein-failures
+.nrepl-port
+.cpcache/
 */config/development
 */logs/log-*.php
 !*/logs/index.html
@@ -363,12 +383,6 @@ nra.cache
 # not necessary for Craft 3 (https://github.com/craftcms/craft/issues/26)
 /craft/storage/*
 !/craft/storage/rebrand
-*.i
-*.ii
-*.gpu
-*.ptx
-*.cubin
-*.fatbin
 # Compiled Object files
 *.o
 *.obj
@@ -393,6 +407,11 @@ docs/
 
 # Code coverage
 *.lst
+*.dmb
+*.rsc
+*.int
+*.lk
+*.zip
 # See https://www.dartlang.org/guides/libraries/private-files
 
 # Files and directories created by pub
@@ -480,11 +499,6 @@ __recovery/
 
 # Castalia statistics file (since XE7 Castalia is distributed with Delphi)
 *.stat
-*.dmb
-*.rsc
-*.int
-*.lk
-*.zip
 # Ignore configuration files that may contain sensitive information.
 sites/*/*settings*.php
 sites/example.sites.php
@@ -524,6 +538,10 @@ xmlrpc.php
 /profiles
 /scripts
 /themes
+######################
+## EPiServer Files
+######################
+*License.config
 # Ignore list for Eagle, a PCB layout tool
 
 # Backup files
@@ -599,10 +617,6 @@ erl_crash.dump
 elm-stuff
 # elm-repl generated files
 repl-temp-*
-######################
-## EPiServer Files
-######################
-*License.config
 .eunit
 deps
 *.o
@@ -665,7 +679,39 @@ resources/.arch-internal-preview.css
 .settings
 salesforce.schema
 Referenced Packages
-C++.gitignore# the composer package lock file and install directory
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+# the composer package lock file and install directory
 # Commit your application's lock file http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file
 # You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
 # /composer.lock
@@ -686,6 +732,31 @@ C++.gitignore# the composer package lock file and install directory
 /fuel/app/logs/*/*/*
 /fuel/app/cache/*/*
 /fuel/app/config/crypt.php
+*.class
+
+# Package Files #
+*.jar
+*.war
+
+# gwt caches and compiled units #
+war/gwt_bree/
+gwt-unitCache/
+
+# boilerplate generated classes #
+.apt_generated/
+
+# more caches and things from deploy #
+war/WEB-INF/deploy/
+war/WEB-INF/classes/
+
+#compilation logs
+.gwt/
+
+#gwt junit compilation files
+www-test/
+
+#old GWT (1.5) created this dir
+.gwt-tmp/
 # gcc coverage testing tool files
 
 *.gcno
@@ -774,31 +845,6 @@ gradle-app.setting
 
 # "temporary" build files
 /target
-*.class
-
-# Package Files #
-*.jar
-*.war
-
-# gwt caches and compiled units #
-war/gwt_bree/
-gwt-unitCache/
-
-# boilerplate generated classes #
-.apt_generated/
-
-# more caches and things from deploy #
-war/WEB-INF/deploy/
-war/WEB-INF/classes/
-
-#compilation logs
-.gwt/
-
-#gwt junit compilation files
-www-test/
-
-#old GWT (1.5) created this dir
-.gwt-tmp/
 dist
 dist-*
 cabal-dev
@@ -821,13 +867,13 @@ cabal.project.local
 cabal.project.local~
 .HTF/
 .ghc.environment.*
-*.ibc
-*.o
 # Avoid including Experiment files: they can be created and edited locally to test the ipf files
 *.pxp
 *.pxt
 *.uxp
 *.uxt
+*.ibc
+*.o
 # Compiled class file
 *.class
 
@@ -1440,7 +1486,30 @@ _autosave-*
 *.csv
 application/cache/*
 application/logs/*
-Java.gitignore# Libraries
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+# Libraries
 *.lvlibp
 *.llb
 
@@ -1727,6 +1796,29 @@ typings/
 
 # Serverless directories
 .serverless
+*.annot
+*.cmo
+*.cma
+*.cmi
+*.a
+*.o
+*.cmx
+*.cmxs
+*.cmxa
+
+# ocamlbuild working directory
+_build/
+
+# ocamlbuild targets
+*.byte
+*.native
+
+# oasis generated files
+setup.data
+setup.log
+
+# Merlin configuring file for Vim and Emacs
+.merlin
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
@@ -1793,29 +1885,6 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
-*.annot
-*.cmo
-*.cma
-*.cmi
-*.a
-*.o
-*.cmx
-*.cmxs
-*.cmxa
-
-# ocamlbuild working directory
-_build/
-
-# ocamlbuild targets
-*.byte
-*.native
-
-# oasis generated files
-setup.data
-setup.log
-
-# Merlin configuring file for Vim and Emacs
-.merlin
 _build
 _tracks
 
@@ -2177,6 +2246,57 @@ vignettes/*.pdf
 
 # Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
 rsconnect/
+devel/
+logs/
+build/
+bin/
+lib/
+msg_gen/
+srv_gen/
+msg/*Action.msg
+msg/*ActionFeedback.msg
+msg/*ActionGoal.msg
+msg/*ActionResult.msg
+msg/*Feedback.msg
+msg/*Goal.msg
+msg/*Result.msg
+msg/_*.py
+build_isolated/
+devel_isolated/
+
+# Generated by dynamic reconfigure
+*.cfgc
+/cfg/cpp/
+/cfg/*.py
+
+# Ignore generated docs
+*.dox
+*.wikidoc
+
+# eclipse stuff
+.project
+.cproject
+
+# qcreator stuff
+CMakeLists.txt.user
+
+srv/_*.py
+*.pcd
+*.pyc
+qtcreator-*
+*.user
+
+/planning/cfg
+/planning/docs
+/planning/src
+
+*~
+
+# Emacs
+.#*
+
+# Catkin custom files
+CATKIN_IGNORE
 *.rbc
 capybara-*.html
 .rspec
@@ -2235,57 +2355,6 @@ bin/target
 bin/*.ap_
 *.o
 *.jar
-devel/
-logs/
-build/
-bin/
-lib/
-msg_gen/
-srv_gen/
-msg/*Action.msg
-msg/*ActionFeedback.msg
-msg/*ActionGoal.msg
-msg/*ActionResult.msg
-msg/*Feedback.msg
-msg/*Goal.msg
-msg/*Result.msg
-msg/_*.py
-build_isolated/
-devel_isolated/
-
-# Generated by dynamic reconfigure
-*.cfgc
-/cfg/cpp/
-/cfg/*.py
-
-# Ignore generated docs
-*.dox
-*.wikidoc
-
-# eclipse stuff
-.project
-.cproject
-
-# qcreator stuff
-CMakeLists.txt.user
-
-srv/_*.py
-*.pcd
-*.pyc
-qtcreator-*
-*.user
-
-/planning/cfg
-/planning/docs
-/planning/src
-
-*~
-
-# Emacs
-.#*
-
-# Catkin custom files
-CATKIN_IGNORE
 *.gem
 *.rbc
 /.config
@@ -2346,6 +2415,8 @@ Cargo.lock
 
 # These are backup files generated by rustfmt
 **/*.rs.bk
+# for projects that use SCons for building: http://http://www.scons.org/
+.sconsign.dblite
 .sass-cache/
 *.css.map
 *.sass.map
@@ -2359,8 +2430,6 @@ Cargo.lock
 *.scm~
 *.scm#*
 .#*.scm
-# for projects that use SCons for building: http://http://www.scons.org/
-.sconsign.dblite
 /Files/binder.autosave
 /Files/binder.backup
 /Files/search.indexes
@@ -2589,21 +2658,6 @@ manifest/tmp/
 symphony/
 workspace/uploads/
 install-log.txt
-# Local .terraform directories
-**/.terraform/*
-
-# .tfstate files
-*.tfstate
-*.tfstate.*
-
-# Crash log files
-crash.log
-
-# Ignore any .tfvars files that are generated automatically for each Terraform run. Most
-# .tfvars files are managed as part of configuration and so should be included in
-# version control.
-#
-# example.tfvars
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
@@ -2847,6 +2901,21 @@ TSWLatexianTemp*
 
 # standalone packages
 *.sta
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+
+# Ignore any .tfvars files that are generated automatically for each Terraform run. Most
+# .tfvars files are managed as part of configuration and so should be included in
+# version control.
+#
+# example.tfvars
 .htaccess
 css.php
 rpc/
@@ -2963,6 +3032,12 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# .v4p backup files
+*~.xml
+
+# Dynamic plugins .dll
+bin/
 # Visual Studio 2015 user specific files
 .vs/
 
@@ -3366,12 +3441,6 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder
 .mfractor/
-
-# .v4p backup files
-*~.xml
-
-# Dynamic plugins .dll
-bin/
 # For projects that use the Waf build system: https://waf.io/
 # Dot-hidden on Unix-like systems
 .waf-*-*/

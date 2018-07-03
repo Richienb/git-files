@@ -39,6 +39,12 @@
 *.exe binary
 *.out binary
 *.app binary
+# Auto detect text files and perform LF normalization
+# http://davidlaing.com/2012/09/19/customise-your-gitattributes-to-become-a-git-ninja/
+* text=auto
+
+*.cs     diff=csharp
+
 #common settings that generally should always be used with your language specific settings
 
 # Auto detect text files and perform LF normalization
@@ -82,12 +88,6 @@
 *.svg binary
 #*.svg text
 *.eps binary
-# Auto detect text files and perform LF normalization
-# http://davidlaing.com/2012/09/19/customise-your-gitattributes-to-become-a-git-ninja/
-* text=auto
-
-*.cs     diff=csharp
-
 # Drupal git normalization
 # @see https://www.kernel.org/pub/software/scm/git/docs/gitattributes.html
 # @see https://www.drupal.org/node/1542048
