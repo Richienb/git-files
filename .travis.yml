@@ -6,25 +6,28 @@ python:
   - 3.6.5
 
 before_install:
+  - git remote set-url origin https://Richienb:${github_token}@github.com/Richienb/git-files.git
   - git config --global user.email "richiebendall@gmail.com"
   - git config --global user.name "Richienb"
 
 install:
-  - pip install future
-  - git clone https://Richienb:${github_token}@github.com/Richienb/git-files.git
-  - cd git-files
+  - pip install -r requirements.txt
   - git clone https://github.com/github/gitignore.git
   - git clone https://github.com/alexkaratarakis/gitattributes.git
 
+before_script:
+  - autopep8 -v -i -r -a -a -a $PWD/src
+  - git add *
+  - git commit -m "Normalised files to follow the PEP8 specification [skip ci]
+
 script:
-  - python generate.py $TRAVIS_BUILD_DIR/git-files
-  
-after_success:
-  - git add $TRAVIS_BUILD_DIR/git-files/files/.gitignore $TRAVIS_BUILD_DIR/git-files/files/.gitattributes
+  - python generate.py $PWD
+  - git add $PWD/files/.gitignore $PWD/files/.gitattributes
   - git commit -m "Update Git Files [skip ci]"
-  - pasteurize $PWD/generate.py
-  - mv $PWD/generate.py $PWD/generate2.py
-  - git add $PWD/generate2.py
+
+after_success:
+  - pasteurize generate.py
+  - git add generate.py
   - git commit -m "Added backwards compatibility [skip ci]"
   - git push
 
