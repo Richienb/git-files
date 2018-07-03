@@ -1,10 +1,11 @@
 from sys import argv as args
-import glob, os
+import glob
+import os
 
 # Set root directory
 try:
     rootdir = args[1]
-except:
+except BaseException:
     print("Please specify the directory you are running this script in.")
 
 # Clear files
