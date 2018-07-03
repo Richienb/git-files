@@ -16,20 +16,20 @@ install:
   - git clone https://github.com/alexkaratarakis/gitattributes.git
 
 before_script:
-  - autopep8 -v -i -r -a -a -a $PWD/src
+  - autopep8 -v -i -r -a -a -a generate.py
   - git add generate.py
-  - git commit -m "Normalised generation file to follow the PEP8 specification [skip ci]"
+  - git diff-index --quiet HEAD || git commit -m "Normalised generation file to follow the PEP8 specification [skip ci]"
 
 script:
   - python generate.py $PWD
-  - git add -f $PWD/files/.gitignore $PWD/files/.gitattributes
+  - git diff-index --quiet HEAD || git add -f $PWD/files/.gitignore $PWD/files/.gitattributes
   - git commit -m "Update Git Files [skip ci]"
 
 after_success:
   - pasteurize generate.py
   - git add generate.py
-  - git commit -m "Added backwards compatibility [skip ci]"
-  - git push
+  - git diff-index --quiet HEAD || git commit -m "Added backwards compatibility [skip ci]"
+  - git push origin HEAD:master
 
 notifications:
   email: false
