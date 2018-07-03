@@ -18,7 +18,7 @@ install:
 before_script:
   - autopep8 -v -i -r -a -a -a $PWD/src
   - git add generate.py
-  - git commit -m "Normalised generation file to follow the PEP8 specification [skip ci]
+  - git commit -m "Normalised generation file to follow the PEP8 specification [skip ci]"
 
 script:
   - python generate.py $PWD
