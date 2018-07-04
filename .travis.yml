@@ -22,8 +22,8 @@ before_script:
 
 script:
   - python generate.py $PWD
-  - git diff-index --quiet HEAD || git add -f $PWD/files/.gitignore $PWD/files/.gitattributes
-  - git commit -m "Update Git Files [skip ci]"
+  - git add -f $PWD/files/.gitignore $PWD/files/.gitattributes
+  - git diff-index --quiet HEAD || git commit -m "Update Git Files [skip ci]"
 
 after_success:
   - pasteurize generate.py
