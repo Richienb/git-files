@@ -2,9 +2,31 @@
 
 A `.gitignore` and `.gitattributes` file containing ignore and attribute code for all programming languages, automatically updated daily.
 
-### How to use
+## How to use
 
 Execute the commands while in the root directory of the Git repository
+
+### Method 1:
+
+#### Travis CI
+```yml
+install:
+  - curl -L -o .gitignore https://rawgit.com/Richienb/git-files/master/files/.gitignore
+  - curl -L -o .gitattributes https://rawgit.com/Richienb/git-files/master/files/.gitattributes
+```
+
+#### Shell/Terminal
+```sh
+$ curl -L -o .gitignore https://rawgit.com/Richienb/git-files/master/files/.gitignore
+$ curl -L -o .gitattributes https://rawgit.com/Richienb/git-files/master/files/.gitattributes
+```
+
+### Cmd/Batch/Powershell
+```bat
+curl -L -o .gitignore https://rawgit.com/Richienb/git-files/master/files/.gitignore
+curl -L -o .gitattributes https://rawgit.com/Richienb/git-files/master/files/.gitattributes
+```
+### Method 2:
 
 #### Travis CI
 ```yml
@@ -23,7 +45,7 @@ $ mv -f git-files/files/.gitattributes .
 $ rm -rf git-files
 ```
 
-### Cmd/Batch/Powershell
+#### Cmd/Batch/Powershell
 ```bat
 git clone https://github.com/Richienb/git-files.git
 move /Y git-files/files/.gitignore .
