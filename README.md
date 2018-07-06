@@ -21,7 +21,7 @@ $ curl -L -o .gitignore https://rawgit.com/Richienb/git-files/master/files/.giti
 $ curl -L -o .gitattributes https://rawgit.com/Richienb/git-files/master/files/.gitattributes
 ```
 
-### Cmd/Batch/Powershell
+#### Cmd/Batch/Powershell
 ```bat
 curl -L -o .gitignore https://rawgit.com/Richienb/git-files/master/files/.gitignore
 curl -L -o .gitattributes https://rawgit.com/Richienb/git-files/master/files/.gitattributes
