@@ -3446,6 +3446,9 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder
 .mfractor/
+
+# Local History for Visual Studio
+.localhistory/
 # For projects that use the Waf build system: https://waf.io/
 # Dot-hidden on Unix-like systems
 .waf-*-*/
