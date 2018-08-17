@@ -1471,7 +1471,6 @@ deps/deps.jl
 *~
 _autosave-*
 *.tmp
-*-cache.lib
 *-rescue.lib
 *-save.pro
 *-save.kicad_pcb
