@@ -2043,6 +2043,8 @@ download/
 upload/
 .DS_Store
 applet
+application.linux-arm64
+application.linux-armv6hf
 application.linux32
 application.linux64
 application.windows32
@@ -2130,6 +2132,10 @@ target/
 # Jupyter Notebook
 .ipynb_checkpoints
 
+# IPython
+profile_default/
+ipython_config.py
+
 # pyenv
 .python-version
 
@@ -2160,6 +2166,8 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+.dmypy.json
+dmypy.json
 cache
 cache-downloads
 inspector
@@ -2931,6 +2939,12 @@ crash.log
 # version control.
 #
 # example.tfvars
+
+# Ignore override files as they are usually used to override ressources locally
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
 .htaccess
 css.php
 rpc/
