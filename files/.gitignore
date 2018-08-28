@@ -123,6 +123,8 @@ autom4te.cache
 /compile
 /config.guess
 /config.h.in
+/config.log
+/config.status
 /config.sub
 /configure
 /configure.scan
@@ -1469,7 +1471,6 @@ deps/deps.jl
 *~
 _autosave-*
 *.tmp
-*-cache.lib
 *-rescue.lib
 *-save.pro
 *-save.kicad_pcb
@@ -1529,6 +1530,7 @@ hs_err_pid*
 vendor/
 node_modules/
 npm-debug.log
+yarn-error.log
 
 # Laravel 4 specific
 bootstrap/compiled.php
@@ -1538,14 +1540,10 @@ app/storage/
 public/storage
 public/hot
 storage/*.key
-.env.*.php
-.env.php
 .env
 Homestead.yaml
 Homestead.json
-
-# Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
-.rocketeer/
+/.vagrant
 pom.xml
 pom.xml.asc
 *.jar
@@ -2045,6 +2043,8 @@ download/
 upload/
 .DS_Store
 applet
+application.linux-arm64
+application.linux-armv6hf
 application.linux32
 application.linux64
 application.windows32
@@ -2132,6 +2132,10 @@ target/
 # Jupyter Notebook
 .ipynb_checkpoints
 
+# IPython
+profile_default/
+ipython_config.py
+
 # pyenv
 .python-version
 
@@ -2162,6 +2166,8 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+.dmypy.json
+dmypy.json
 cache
 cache-downloads
 inspector
@@ -2604,6 +2610,13 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# Code Injection
+#
+# After new code Injection tools there's a generated folder /iOSInjectionProject
+# https://github.com/johnno1962/injectionforxcode
+
+iOSInjectionProject/
 # Cache and logs (Symfony2)
 /app/cache/*
 /app/logs/*
@@ -2620,6 +2633,10 @@ fastlane/test_output
 !var/cache/.gitkeep
 !var/logs/.gitkeep
 !var/sessions/.gitkeep
+
+# Logs (Symfony4)
+/var/log/*
+!var/log/.gitkeep
 
 # Parameters
 /app/config/parameters.yml
@@ -2848,6 +2865,9 @@ sympy-plots-for-*.tex/
 *.pytxcode
 pythontex-files-*/
 
+# tcolorbox
+*.listing
+
 # thmtools
 *.loe
 
@@ -2919,6 +2939,12 @@ crash.log
 # version control.
 #
 # example.tfvars
+
+# Ignore override files as they are usually used to override ressources locally
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
 .htaccess
 css.php
 rpc/
@@ -3176,7 +3202,7 @@ StyleCopReport.xml
 # Files built by Visual Studio
 *_i.c
 *_p.c
-*_i.h
+*_h.h
 *.ilk
 *.meta
 *.obj
@@ -3444,6 +3470,9 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder
 .mfractor/
+
+# Local History for Visual Studio
+.localhistory/
 # For projects that use the Waf build system: https://waf.io/
 # Dot-hidden on Unix-like systems
 .waf-*-*/
