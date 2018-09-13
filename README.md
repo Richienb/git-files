@@ -6,6 +6,10 @@ A `.gitignore` and `.gitattributes` file containing ignore and attribute code fo
 
 Execute the commands while in the root directory of your Git repository
 
+- [Using cURL](#method-1---using-curl)
+- [Using wGET](#method-2---using-wget)
+- [Using Traditional Git Cloning](#method-3---using-traditional-git-cloning)
+
 ### Method 1 - Using cURL:
 
 #### Travis CI
