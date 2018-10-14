@@ -25,6 +25,7 @@ bin-release/
 # Built application files
 *.apk
 *.ap_
+*.aab
 
 # Files for the ART/Dalvik VM
 *.dex
@@ -67,8 +68,9 @@ captures/
 .idea/caches
 
 # Keystore files
-# Uncomment the following line if you do not want to check your keystore files in.
+# Uncomment the following lines if you do not want to check your keystore files in.
 #*.jks
+#*.keystore
 
 # External native build folder generated in Android Studio 2.2 and later
 .externalNativeBuild
@@ -501,6 +503,9 @@ __recovery/
 
 # Castalia statistics file (since XE7 Castalia is distributed with Delphi)
 *.stat
+
+# Boss dependency manager vendor folder https://github.com/HashLoad/boss
+modules/
 # Ignore configuration files that may contain sensitive information.
 sites/*/*settings*.php
 sites/example.sites.php
@@ -1527,7 +1532,7 @@ hs_err_pid*
 *.aliases
 *.lvlps
 .cache/
-vendor/
+/vendor/
 node_modules/
 npm-debug.log
 yarn-error.log
@@ -2356,6 +2361,7 @@ node_modules/
 # Ignore precompiled javascript packs
 /public/packs
 /public/packs-test
+/public/assets
 
 # Ignore yarn files
 /yarn-error.log
