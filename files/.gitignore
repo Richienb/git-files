@@ -1799,6 +1799,9 @@ typings/
 
 # Serverless directories
 .serverless
+
+# FuseBox cache
+.fusebox/
 *.annot
 *.cmo
 *.cma
