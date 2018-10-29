@@ -1637,6 +1637,8 @@ luac.out
 # Magento Default Files    #
 #--------------------------#
 
+/PATCH_*.sh
+
 /app/etc/local.xml
 
 /media/*
