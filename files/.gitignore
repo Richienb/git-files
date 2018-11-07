@@ -620,6 +620,7 @@ erl_crash.dump
 *.ez
 *.beam
 /config/*.secret.exs
+.elixir_ls/
 # elm-package generated files
 elm-stuff
 # elm-repl generated files
