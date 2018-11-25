@@ -1382,15 +1382,24 @@ jboss/server/minimal/work/**/*
 *.DEPLOYED
 # changes file
 *.changes
+*.chg
 
 # system image
 *.image
+*.img7
+*.img
 
 # Pharo Smalltalk Debug log file
 PharoDebug.log
 
 # Squeak Smalltalk Debug log file
 SqueakDebug.log
+
+# Dolphin Smalltalk source file
+*.sml
+
+# Dolphin Smalltalk error file
+*.errors
 
 # Monticello package cache
 /package-cache
@@ -2328,6 +2337,8 @@ orleans.codegen.cs
 # Since there are multiple workflows, uncomment next line to ignore bower_components
 # (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
 #bower_components/
+# ASP.NET Core default setup: bower directory is configured as wwwroot/lib/ and bower restore is true
+**/wwwroot/lib/
 
 # RIA/Silverlight projects
 Generated_Code/
@@ -2543,6 +2554,10 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# Crashlytics generated file
+Assets/StreamingAssets/crashlytics-build.properties
+
 # Composer files
 composer.phar
 vendor/
