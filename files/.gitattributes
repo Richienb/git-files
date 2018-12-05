@@ -474,7 +474,6 @@ TODO         text
 .env           text
 .gitattributes text
 .gitconfig     text
-.gitignore     text
 .htaccess      text
 *.lock         text
 *.npmignore    text
