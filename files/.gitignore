@@ -2524,7 +2524,7 @@ upload/
 [Bb]uild/
 [Bb]uilds/
 [Ll]ogs/
-Assets/AssetStoreTools*
+[Aa]ssets/AssetStoreTools*
 
 # Visual Studio cache directory
 .vs/
