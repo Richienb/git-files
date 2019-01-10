@@ -226,6 +226,13 @@ fastlane/readme.md
 
 # Version control
 vcs.xml
+
+# lint
+lint/intermediates/
+lint/generated/
+lint/outputs/
+lint/tmp/
+# lint/reports/
 # Compiled Lua sources
 luac.out
 
@@ -2527,7 +2534,9 @@ upload/
 [Bb]uild/
 [Bb]uilds/
 [Ll]ogs/
-[Aa]ssets/AssetStoreTools*
+
+# Uncomment this line if you wish to ignore the asset store tools plugin
+# [Aa]ssets/AssetStoreTools*
 
 # Visual Studio cache directory
 .vs/
@@ -2549,12 +2558,14 @@ ExportedObj/
 *.booproj
 *.svd
 *.pdb
+*.mdb
 *.opendb
 *.VC.db
 
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta
+*.mdb.meta
 
 # Unity3D generated file on crash reports
 sysinfo.txt
@@ -2564,7 +2575,7 @@ sysinfo.txt
 *.unitypackage
 
 # Crashlytics generated file
-Assets/StreamingAssets/crashlytics-build.properties
+crashlytics-build.properties
 
 # Composer files
 composer.phar
