@@ -200,6 +200,9 @@ captures/
 .idea/dictionaries
 .idea/libraries
 .idea/caches
+# Android Studio 3 in .gitignore file.
+.idea/caches/build_file_checksums.ser
+.idea/modules.xml
 
 # Keystore files
 # Uncomment the following lines if you do not want to check your keystore files in.
@@ -1066,6 +1069,7 @@ cmake_install.cmake
 install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
+_deps
 workspace.xml
 junitvmwatcher*.properties
 build.properties
@@ -1243,6 +1247,9 @@ target_wrapper.*
 
 # QtCreator CMake
 CMakeLists.txt.user*
+
+# QtCreator 4.8< compilation database 
+compile_commands.json
 # Compiled class file
 *.class
 
@@ -2018,6 +2025,7 @@ parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
 share/python-wheels/
 *.egg-info/
 .installed.cfg
