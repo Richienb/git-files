@@ -131,6 +131,7 @@
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
 *.md text
+*.tex text
 *.adoc text
 *.textile text
 *.mustache text
@@ -152,6 +153,13 @@
 *.svg binary
 #*.svg text
 *.eps binary
+
+#
+# Exclude files from exporting
+#
+
+.gitattributes export-ignore
+.gitignore export-ignore
 # compare .pbxproj files as binary and always merge as union
 *.pbxproj binary -merge=union# Basic .gitattributes for a python repo.
 
