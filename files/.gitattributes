@@ -13,7 +13,12 @@
 
 *.swf -crlf -diff -merge
 *.swc -crlf -diff -merge
-*.fla -crlf -diff -merge# Auto detect text files and perform LF normalization
+*.fla -crlf -diff -merge# Treat all Go files in this repo as binary, with no git magic updating
+# line endings. Windows users contributing to Go will need to use a
+# modern version of git and editors capable of LF line endings.
+
+*.go -text
+# Auto detect text files and perform LF normalization
 # http://davidlaing.com/2012/09/19/customise-your-gitattributes-to-become-a-git-ninja/
 * text=auto
 
