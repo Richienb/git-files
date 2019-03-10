@@ -503,6 +503,7 @@ typings/
 !/upload/index.html
 /upload_backup/
 *.agdai
+MAlonzo/**
 .DS_Store
 
 # Images
@@ -701,6 +702,7 @@ storage/*.key
 Homestead.yaml
 Homestead.json
 /.vagrant
+.phpunit.result.cache
 #--------------------------#
 # Magento Default Files    #
 #--------------------------#
@@ -899,6 +901,9 @@ lib/.precomp
 /sites/*/translations
 /sites/*/tmp
 /sites/*/cache
+
+# Ignore testing related files
+/sites/simpletest
 
 # Ignore drupal core (if not versioning drupal sources)
 /core
