@@ -402,6 +402,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
 # Runtime data
 pids
 *.pid
@@ -884,7 +887,7 @@ lib/.precomp
 *.ali
 # gitignore template for Drupal 8 projects
 #
-# earlier versions of Drupal are tracked in `community/Python/`
+# earlier versions of Drupal are tracked in `community/PHP/`
 
 # Ignore configuration files that may contain sensitive information
 /sites/*/*settings*.php
@@ -2098,6 +2101,13 @@ ipython_config.py
 # pyenv
 .python-version
 
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don’t work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
 # celery beat schedule file
 celerybeat-schedule
 
@@ -2148,6 +2158,9 @@ dmypy.json
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
+
+# Mono auto generated files
+mono_crash.*
 
 # Build results
 [Dd]ebug/
@@ -2429,10 +2442,6 @@ paket-files/
 # FAKE - F# Make
 .fake/
 
-# JetBrains Rider
-.idea/
-*.sln.iml
-
 # CodeRush personal settings
 .cr/personal
 
@@ -2566,6 +2575,9 @@ upload/
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # [Aa]ssets/AssetStoreTools*
+
+# TextMesh Pro files
+[Aa]ssets/TextMesh*Pro/
 
 # Visual Studio cache directory
 .vs/
