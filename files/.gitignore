@@ -2787,6 +2787,9 @@ acs-*.bib
 # listings
 *.lol
 
+# luatexja-ruby
+*.ltjruby
+
 # makeidx
 *.idx
 *.ilg
