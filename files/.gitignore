@@ -56,6 +56,10 @@ opa-debug-js
 nimcache/
 # for projects that use SCons for building: http://http://www.scons.org/
 .sconsign.dblite
+
+# When configure fails, SCons outputs these
+config.log
+.sconf_temp
 node_modules/
 bower_components/
 *.log
@@ -402,7 +406,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
-
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
