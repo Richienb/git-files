@@ -2536,6 +2536,7 @@ application.linux64
 application.windows32
 application.windows64
 application.macosx
+out
 # Private files
 # The following files contain your database credentials and other personal data.
 
