@@ -9,7 +9,7 @@ generate:
 
 # Pull Gitfiles from repository
 pull:
-	git clone https://github.com/Richienb/git-files.git
-	mv -f git-files/files/.gitignore .
-	mv -f git-files/files/.gitattributes .
-	rm -rf git-files
+	git clone https://github.com/Richienb/git-files.git .git-files
+	mv -f .git-files/files/.gitignore .
+	mv -f .git-files/files/.gitattributes .
+	rm -rf .git-files
