@@ -554,6 +554,9 @@ _autosave-*
 *-save.pro
 *-save.kicad_pcb
 
+# Footprint cache
+fp-info-cache
+
 # Netlist files (exported from Eeschema)
 *.net
 
