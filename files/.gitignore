@@ -3008,6 +3008,9 @@ TSWLatexianTemp*
 
 # standalone packages
 *.sta
+
+# glossaries-extra
+*.ist
 /.htaccess
 /administrator/cache/*
 /administrator/components/com_admin/*
