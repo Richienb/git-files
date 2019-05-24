@@ -2859,6 +2859,9 @@ acs-*.bib
 *.gls
 *.glsdefs
 
+# uncomment this for glossaries-extra (will ignore makeindex's style files!)
+# *.ist
+
 # gnuplottex
 *-gnuplottex-*
 
@@ -3008,9 +3011,6 @@ TSWLatexianTemp*
 
 # standalone packages
 *.sta
-
-# glossaries-extra
-*.ist
 /.htaccess
 /administrator/cache/*
 /administrator/components/com_admin/*
