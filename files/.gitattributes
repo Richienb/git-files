@@ -44,6 +44,9 @@
 # modern version of git and editors capable of LF line endings.
 
 *.go -text diff=golang
+# Swift gitattributes
+*.pbxproj merge=union
+*.swift   text diff=swift
 # Auto detect text files and perform LF normalization
 # https://www.davidlaing.com/2012/09/19/customise-your-gitattributes-to-become-a-git-ninja/
 *    text=auto
