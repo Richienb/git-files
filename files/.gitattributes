@@ -180,6 +180,7 @@
 *.csv      text
 *.tab      text
 *.tsv      text
+*.txt      text
 *.sql      text
 
 # Graphics
@@ -195,8 +196,28 @@
 # If you want to treat it as binary,
 # use the following line instead.
 # *.svg    binary
-
 *.eps      binary
+
+# Scripts
+*.bash     text eol=lf
+*.sh       text eol=lf
+# These are explicitly windows files and should use crlf
+*.bat      text eol=crlf
+*.cmd      text eol=crlf
+*.ps1      text eol=crlf
+
+# Serialisation
+*.json     text
+*.toml     text
+*.xml      text
+*.yaml     text
+*.yml      text
+
+# Archives
+*.7z       binary
+*.gz       binary
+*.tar      binary
+*.zip      binary
 
 #
 # Exclude files from exporting
@@ -442,45 +463,32 @@
 *.sec -text
 *.css text diff=css
 *.js       seol=lf
-# Handle line endings automatically for files detected as text
-# and leave all files detected as binary untouched.
-*               text=auto
+# Java sources
+*.java          text diff=java
+*.gradle        text diff=java
+*.gradle.kts    text diff=java
 
-#
-# The above will handle all files NOT found below
-#
 # These files are text and should be normalized (Convert crlf => lf)
-*.bash          text eol=lf
 *.css           text diff=css
 *.df            text
 *.htm           text diff=html
 *.html          text diff=html
-*.java          text diff=java
 *.js            text
-*.json          text
 *.jsp           text
 *.jspf          text
 *.jspx          text
 *.properties    text
-*.sh            text eol=lf
 *.tld           text
-*.txt           text
 *.tag           text
 *.tagx          text
 *.xml           text
-*.yml           text
 
 # These files are binary and should be left untouched
 # (binary is a macro for -text -diff)
 *.class         binary
 *.dll           binary
 *.ear           binary
-*.gif           binary
-*.ico           binary
 *.jar           binary
-*.jpg           binary
-*.jpeg          binary
-*.png           binary
 *.so            binary
 *.war           binary
 # Basic .gitattributes for a perl repo.
