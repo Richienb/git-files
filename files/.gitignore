@@ -2864,6 +2864,8 @@ acs-*.bib
 *.glo
 *.gls
 *.glsdefs
+*.lzo
+*.lzs
 
 # uncomment this for glossaries-extra (will ignore makeindex's style files!)
 # *.ist
@@ -3018,7 +3020,9 @@ TSWLatexianTemp*
 
 # standalone packages
 *.sta
-/.htaccess
+
+# Makeindex log files
+*.lpz/.htaccess
 /administrator/cache/*
 /administrator/components/com_actionlogs/*
 /administrator/components/com_admin/*
