@@ -70,11 +70,17 @@ dist/
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
-## Build generated
+## User settings
+xcuserdata/
+
+## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
+*.xcscmblueprint
+*.xccheckout
+
+## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
 build/
 DerivedData/
-
-## Various settings
+*.moved-aside
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -83,15 +89,11 @@ DerivedData/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata/
-
-## Other
-*.moved-aside
-*.xccheckout
-*.xcscmblueprint
 
 ## Obj-C/Swift specific
 *.hmap
+
+## App packaging
 *.ipa
 *.dSYM.zip
 *.dSYM
@@ -106,6 +108,12 @@ playground.xcworkspace
 # Packages/
 # Package.pins
 # Package.resolved
+# *.xcodeproj
+#
+# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
+# hence it is not needed unless you have added a package configuration file to your project
+# .swiftpm
+
 .build/
 
 # CocoaPods
@@ -124,7 +132,7 @@ playground.xcworkspace
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 # Carthage/Checkouts
 
-Carthage/Build
+Carthage/Build/
 
 # Accio dependency management
 Dependencies/
@@ -132,8 +140,8 @@ Dependencies/
 
 # fastlane
 #
-# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
-# screenshots whenever they are needed.
+# It is recommended to not store the screenshots in the git repo.
+# Instead, use fastlane to re-generate the screenshots whenever they are needed.
 # For more information about the recommended setup visit:
 # https://docs.fastlane.tools/best-practices/source-control/#source-control
 
@@ -970,11 +978,17 @@ lib/.precomp
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
-## Build generated
+## User settings
+xcuserdata/
+
+## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
+*.xcscmblueprint
+*.xccheckout
+
+## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
 build/
 DerivedData/
-
-## Various settings
+*.moved-aside
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -983,15 +997,11 @@ DerivedData/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata/
-
-## Other
-*.moved-aside
-*.xccheckout
-*.xcscmblueprint
 
 ## Obj-C/Swift specific
 *.hmap
+
+## App packaging
 *.ipa
 *.dSYM.zip
 *.dSYM
@@ -1012,12 +1022,12 @@ xcuserdata/
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 # Carthage/Checkouts
 
-Carthage/Build
+Carthage/Build/
 
 # fastlane
 #
-# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
-# screenshots whenever they are needed.
+# It is recommended to not store the screenshots in the git repo.
+# Instead, use fastlane to re-generate the screenshots whenever they are needed.
 # For more information about the recommended setup visit:
 # https://docs.fastlane.tools/best-practices/source-control/#source-control
 
@@ -1971,6 +1981,12 @@ m4/ltoptions.m4
 m4/ltsugar.m4
 m4/ltversion.m4
 m4/lt~obsolete.m4
+
+# Generated Makefile 
+# (meta build system like autotools, 
+# can automatically generate from config.status script
+# (which is called by configure script))
+Makefile
 # elm-package generated files
 elm-stuff
 # elm-repl generated files
@@ -2074,6 +2090,7 @@ export_presets.cfg
 
 # Mono-specific ignores
 .mono/
+data_*/
 jboss/server/all/deploy/project.ext
 jboss/server/default/deploy/project.ext
 jboss/server/minimal/deploy/project.ext
@@ -3005,6 +3022,9 @@ TSWLatexianTemp*
 # Kile
 *.backup
 
+# gummi
+.*.swp
+
 # KBibTeX
 *~[0-9]*
 
@@ -3019,7 +3039,8 @@ TSWLatexianTemp*
 *.sta
 
 # Makeindex log files
-*.lpz/.htaccess
+*.lpz
+/.htaccess
 /administrator/cache/*
 /administrator/components/com_actionlogs/*
 /administrator/components/com_admin/*
