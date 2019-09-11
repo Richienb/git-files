@@ -2374,6 +2374,7 @@ capybara-*.html
 .rspec
 /db/*.sqlite3
 /db/*.sqlite3-journal
+/db/*.sqlite3-[0-9]*
 /public/system
 /coverage/
 /spec/tmp
@@ -3159,6 +3160,8 @@ docs/
 # Undo-tree save-files
 *.~undo-tree
 nimcache/
+nimblecache/
+htmldocs/
 # Build folder and log file
 build/
 build.log
