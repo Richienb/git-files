@@ -2093,6 +2093,10 @@ typings/
 # nuxt.js build output
 .nuxt
 
+# gatsby files
+.cache/
+public
+
 # vuepress build output
 .vuepress/dist
 
@@ -2810,15 +2814,22 @@ TSWLatexianTemp*
 # Makeindex log files
 *.lpz
 .eunit
-deps
 *.o
 *.beam
 *.plt
 erl_crash.dump
-ebin/*.beam
-rel/example_project
 .concrete/DEV_MODE
+
+# rebar 2.x
 .rebar
+rel/example_project
+ebin/*.beam
+deps
+
+# rebar 3
+.rebar3
+_build/
+_checkouts/
 # Cache files, generates by Zephir
 .temp/
 .libs/
