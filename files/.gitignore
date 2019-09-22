@@ -258,6 +258,7 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+[Ll]ogs/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -781,7 +782,8 @@ cabal.project.local~
 bin/
 gen/
 out/
-release/
+#  Uncomment the following line in case you need and you don't have the release build type files in your app
+# release/
 
 # Gradle files
 .gradle/
@@ -1042,6 +1044,7 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *.cover
+*.py,cover
 .hypothesis/
 .pytest_cache/
 
@@ -1384,6 +1387,7 @@ ui_*.h
 *.jsc
 Makefile*
 *build-*
+*.qm
 
 # Qt unit tests
 target_wrapper.*
@@ -2071,6 +2075,12 @@ typings/
 # Optional eslint cache
 .eslintcache
 
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
 # Optional REPL history
 .node_repl_history
 
@@ -2121,13 +2131,14 @@ public
 
 pkg/
 src/
-/Files/binder.autosave
-/Files/binder.backup
-/Files/search.indexes
-/Files/user.lock
-/Files/Docs/docs.checksum
-/QuickLook/
-/Settings/ui.plist
+*/Files/binder.autosave
+*/Files/binder.backup
+*/Files/search.indexes
+*/Files/user.lock
+*/Files/Docs/docs.checksum
+*/Files/Data/docs.checksum
+*/QuickLook/
+*/Settings/ui.plist
 # For projects using Nanoc (http://nanoc.ws/)
 
 # Default location for output (needs to match output_dir's value found in nanoc.yaml)
