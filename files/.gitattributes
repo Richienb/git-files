@@ -655,6 +655,7 @@ schema.rb merge=ours diff=ruby
 
 # Scripts
 *.bash     text eol=lf
+*.fish     text eol=lf
 *.sh       text eol=lf
 # These are explicitly windows files and should use crlf
 *.bat      text eol=crlf
