@@ -672,6 +672,9 @@ schema.rb merge=ours diff=ruby
 *.tar      binary
 *.zip      binary
 
+# Text files where line endings should be preserved
+*.patch    -text
+
 #
 # Exclude files from exporting
 #

@@ -132,6 +132,7 @@ eagle.epf
 # file locks introduced since 7.x
 *.lck
 .*.aux
+.*.d
 *.a
 *.cma
 *.cmi
@@ -150,6 +151,7 @@ eagle.epf
 *.v.d
 *.vio
 *.vo
+*.vos
 .coq-native/
 .csdp.cache
 .lia.cache
@@ -825,6 +827,7 @@ captures/
 
 # External native build folder generated in Android Studio 2.2 and later
 .externalNativeBuild
+.cxx/
 
 # Google Services (e.g. APIs or Firebase)
 # google-services.json
@@ -1088,8 +1091,12 @@ ipython_config.py
 #   install all needed dependencies.
 #Pipfile.lock
 
-# celery beat schedule file
+# pyflow
+__pypackages__/
+
+# Celery stuff
 celerybeat-schedule
+celerybeat.pid
 
 # SageMath parsed files
 *.sage.py
@@ -2470,6 +2477,9 @@ config.log
 # Cache objects
 packer_cache/
 
+# Crash log
+crash.log
+
 # For built boxes
 *.box
 # History files
@@ -2508,6 +2518,9 @@ vignettes/*.pdf
 # Temporary files created by R markdown
 *.utf8.md
 *.knit.md
+
+# R Environment Variables
+.Renviron
 devel/
 logs/
 build/
@@ -2819,6 +2832,9 @@ TSWLatexianTemp*
 
 # KBibTeX
 *~[0-9]*
+
+# TeXnicCenter
+*.tps
 
 # auto folder when using emacs and auctex
 ./auto/*
