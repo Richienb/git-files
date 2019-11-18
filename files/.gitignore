@@ -771,6 +771,7 @@ cabal.project.local~
 .ghc.environment.*
 # Built application files
 *.apk
+*.aar
 *.ap_
 *.aab
 
