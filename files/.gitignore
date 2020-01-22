@@ -727,6 +727,7 @@ waf3-*-*/
 .lock-waf_*_build
 # Dependencies
 .psci_modules
+.spago
 bower_components
 node_modules
 
@@ -903,6 +904,9 @@ a.out
 /[Bb]uild/
 /[Bb]uilds/
 /[Ll]ogs/
+
+# MemoryCaptures can get excessive in size.
+# They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
@@ -1557,6 +1561,7 @@ Makefile.in
 /py-compile
 /test-driver
 /ylwrap
+.deps/
 
 # http://www.gnu.org/software/autoconf
 
@@ -2857,6 +2862,11 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+# REVTeX puts footnotes in the bibliography by default, unless the nofootinbib
+# option is specified. Footnotes are the stored in a file with suffix Notes.bib.
+# Uncomment the next line to have this generated file ignored.
+#*Notes.bib
 .eunit
 *.o
 *.beam
@@ -3126,6 +3136,9 @@ iOSInjectionProject/
 .import/
 export.cfg
 export_presets.cfg
+
+# Imported translations (automatically generated from CSV files)
+*.translation
 
 # Mono-specific ignores
 .mono/
