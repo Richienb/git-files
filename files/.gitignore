@@ -50,6 +50,13 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+# Gitignore for Raku (https://raku.org)
+# As part of https://github.com/github/gitignore
+
+# precompiled files
+.precomp
+lib/.precomp
+
 ## SugarCRM
 # Ignore custom .htaccess stuff.
 /.htaccess
@@ -1061,6 +1068,7 @@ coverage.xml
 *.py,cover
 .hypothesis/
 .pytest_cache/
+cover/
 
 # Translations
 *.mo
@@ -1553,13 +1561,6 @@ pom.xml.asc
 .lein-failures
 .nrepl-port
 .cpcache/
-# Gitignore for Perl 6 (http://www.perl6.org)
-# As part of https://github.com/github/gitignore
-
-# precompiled files
-.precomp
-lib/.precomp
-
 # http://www.gnu.org/software/automake
 
 Makefile.in
@@ -2088,6 +2089,9 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+
+# Snowpack dependency directory (https://snowpack.dev/)
+web_modules/
 
 # TypeScript v1 declaration files
 typings/
