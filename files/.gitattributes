@@ -735,7 +735,6 @@ schema.rb merge=ours diff=ruby
 *.xhtml           text diff=html
 
 # Docker
-*.dockerignore    text
 Dockerfile        text
 
 # Documentation
@@ -781,35 +780,17 @@ TODO              text
 *.twig            text
 *.vue             text
 
-# Linters
-.csslintrc        text
-.eslintrc         text
-.eslintignore     text
-.htmlhintrc       text
-.jscsrc           text
-.jshintrc         text
-.jshintignore     text
-.stylelintrc      text
-
 # Configs
-*.bowerrc         text
 *.cnf             text
 *.conf            text
 *.config          text
-.babelrc          text
-.browserslistrc   text
 .editorconfig     text
 .env              text
 .gitattributes    text
 .gitconfig        text
 .htaccess         text
-.mocharc          text
-.nycrc            text
-.prettierrc       text
-.prettierignore   text
 *.lock            text -diff
 package-lock.json text -diff
-*.npmignore       text
 *.toml            text
 *.yaml            text
 *.yml             text
@@ -819,7 +800,6 @@ makefile          text
 
 # Heroku
 Procfile          text
-.slugignore       text
 
 # Graphics
 *.ai              binary
@@ -895,6 +875,12 @@ Procfile          text
 # Executables
 *.exe             binary
 *.pyc             binary
+
+# RC files (like .babelrc or .eslintrc)
+*.*rc             text
+
+# Ignore files (like .npmignore or .gitignore)
+*.*ignore         text
 # Drupal git normalization
 # @see https://www.kernel.org/pub/software/scm/git/docs/gitattributes.html
 # @see https://www.drupal.org/node/1542048
