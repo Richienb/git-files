@@ -271,6 +271,7 @@ mono_crash.*
 [Rr]eleases/
 x64/
 x86/
+[Ww][Ii][Nn]32/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
@@ -1244,6 +1245,7 @@ instance/
 docs/_build/
 
 # PyBuilder
+.pybuilder/
 target/
 
 # Jupyter Notebook
@@ -1596,6 +1598,8 @@ compile_commands.json
 
 # QtCreator local machine specific files for imported projects
 *creator.user*
+
+*_qmlcache.qrc
 # Object file
 *.o
 
@@ -1726,6 +1730,7 @@ Makefile.in
 /test-driver
 /ylwrap
 .deps/
+.dirstamp
 
 # http://www.gnu.org/software/autoconf
 
