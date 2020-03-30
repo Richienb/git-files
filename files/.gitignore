@@ -2717,6 +2717,9 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# pkgdown site
+docs/
 devel/
 logs/
 build/
