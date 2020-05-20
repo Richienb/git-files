@@ -983,6 +983,7 @@ sysinfo.txt
 
 # Builds
 *.apk
+*.aab
 *.unitypackage
 
 # Crashlytics generated file
@@ -3064,6 +3065,9 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+# xwatermark package
+*.xwm
 
 # REVTeX puts footnotes in the bibliography by default, unless the nofootinbib
 # option is specified. Footnotes are the stored in a file with suffix Notes.bib.
