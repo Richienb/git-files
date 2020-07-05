@@ -892,6 +892,9 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+
+# Android Profiling
+*.hprof
 # unpacked plugin folders
 plugins/**/*
 
