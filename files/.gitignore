@@ -1674,6 +1674,8 @@ Homestead.json
 *.bak
 *.bck
 *.kicad_pcb-bak
+*.kicad_sch-bak
+*.kicad_prl
 *.sch-bak
 *~
 _autosave-*
@@ -3346,7 +3348,6 @@ iOSInjectionProject/
 !/var/package
 /var/package/*
 !/var/package/*.xml
-
 
 # Godot-specific ignores
 .import/
