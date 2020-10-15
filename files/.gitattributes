@@ -706,6 +706,14 @@ schema.rb merge=ours diff=ruby
 .gitattributes export-ignore
 .gitignore     export-ignore
 .gitkeep       export-ignore
+# Basic .gitattributes for a Vim repo.
+# Vim on Linux works with LF only, Vim on Windows works with both LF and CRLF
+
+# Source files
+# ============
+*.vim text eol=lf
+.vimrc text eol=lf
+.gvimrc text eol=lf
 ## GITATTRIBUTES FOR WEB PROJECTS
 #
 # These settings are for any web project.
