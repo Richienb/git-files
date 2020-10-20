@@ -398,7 +398,9 @@ schema.rb merge=ours diff=ruby
 *.meta              linguist-generated
 *.prefab            linguist-generated
 *.unity             linguist-generated
-# Auto detect text files and perform LF normalization
+
+# Spine export file for Unity
+*.skel.bytes        binary# Auto detect text files and perform LF normalization
 # https://www.davidlaing.com/2012/09/19/customise-your-gitattributes-to-become-a-git-ninja/
 *          text=auto
 
